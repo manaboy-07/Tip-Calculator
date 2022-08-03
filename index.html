@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManaDev.Tip Calculator</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tip-wrapper" class="tip-wrapper">
+
+        <label for="bill"><h3>Bill Total</h3></label>
+        <div class="bill-container space">
+           <span>$  <input type="text" id="bill" placeholder="0.00" onkeyup="calculateBill()"> </span>
+        </div>
+       <div class="Tip-Container">
+        <label for="tip"><h3>Tip</h3></label>
+        <div class="tip-container space">
+           <span> % <input type="text" id="tip" placeholder="10" onkeyup="calculateBill()" > </span> 
+        </div>
+       </div>
+       <div class="people-wrapper">
+            <div class="People">
+                <label for="peopleNumber"><h3>People</h3></label>
+                <div class="PeopleManipulation" id="peopleNumber">
+                    <button id="Increment" class="manipulate" onclick="increment()" >+</button>
+                    <div id="NumberOfPeople">1</div>
+                    <button id="decrement" class="manipulate" onclick="decrement()" >-</button>
+                </div>
+            </div>
+
+            <div id="TotalPerPerson" >
+                <label for="TotalPerson" class="TotalPerPerson"><h3>Total Per Person</h3></label>
+                <div>
+                   <span>$ <input type="text" id="InputTotal" placeholder="0.00"></span>
+                </div>
+            </div>
+
+       </div>
+       <div >
+        <button id="clear">Clear</button>
+       </div>
+    </div>
+    <script src="tip.js"></script>
+</body>
+</html>
